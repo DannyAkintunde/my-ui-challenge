@@ -1,0 +1,112 @@
+:root {
+    --burnt-orange: 247, 100, 80;
+    --ripe-orange: 248, 133, 78;
+    --accent-orange: 194, 143, 96;
+    --text-secondary: 209, 209, 209;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+img {
+    display: block;
+    width: 100%;
+    font-style: italic;
+    object-fit: cover;
+    object-position: center;
+}
+
+body {
+    margin: 0;
+    background: linear-gradient(
+        to bottom right,
+        rgb(var(--ripe-orange)),
+        rgb(var(--burnt-orange))
+    );
+}
+
+.container {
+    display: flex;
+    margin: 0 1.5rem;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    min-height: 100vh;
+    min-height: 100dvh;
+}
+
+.card {
+    min-height: 400px;
+    flex-basis: 280px;
+    /* min-width: 200px; */
+    overflow: hidden;
+    background-color: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+.card img {
+    height: 100%;
+}
+.card .image {
+    height: 160px;
+    overflow: hidden;
+    border-bottom: 5px solid rgba(var(--ripe-orange), 0.42);
+}
+.card .content {
+    padding: 0.5rem;
+    margin-top: 1.5rem;
+    text-align: center;
+}
+.card .content span {
+    display: block;
+    font-weight: bolder;
+    color: rgb(var(--text-secondary));
+    font-size: 16px;
+    font-family: monospace;
+}
+
+.card .content h1 {
+    font-weight: bolder;
+}
+
+.card .content p {
+    color: hsla(0, 0%, 0%, 0.6);
+    font-size: 14px;
+    margin-bottom: 1.5rem;
+}
+
+.card a.more {
+    display: inline-block;
+    margin-bottom: 0.3rem;
+    color: rgb(var(--ripe-orange));
+    border: 2px solid rgb(var(--ripe-orange));
+    background-color: transparent;
+    padding: 0.5rem 1rem;
+    border-radius: 1.5rem;
+    cursor: pointer;
+    font-weight: bolder;
+    font-size: 16px;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+}
+
+.card a.more:hover {
+    background-color: rgb(var(--ripe-orange));
+    color: white;
+    transform: scale(1.05);
+}
+.card a.more:active {
+    transform: scale(0.95);
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        margin: 1.5rem;
+        flex-direction: column;
+        align-items: center;
+    }
+    .card {
+        flex-basis: 100%;
+        max-width: 400px;
+    }
+}

@@ -2,7 +2,9 @@
 
 The file tracks the order and details of the UI designs i'm recreating to improve my frontend skills.
 
-|#|Project Name|Description|Status|Date Started|Date Completed|
-|-|------------|-----------|------|------------|--------------|
+| #   | Project Name | Description          | Status    | Date Started | Date Completed | Preview                                                                      |
+| --- | ------------ | -------------------- | --------- | ------------ | -------------- | ---------------------------------------------------------------------------- |
+| 1   | Simple Cards | Simple travel cards  | completed | 08/05/2025   | i forgot 😅    | [View Live](https://dannyakintunde.github.io/my-ui-challenge/simple%20cards) |
+| 2   | Chavy        | Simple pricing cards | completed | 20/06/2025   | 20/06/2025     | [View Live](https://dannyakintunde.github.io/my-ui-challenge/chavy)          |
 
 > Note: i update this file as i progress through each design challenge

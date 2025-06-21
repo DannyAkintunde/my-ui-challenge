@@ -1,0 +1,267 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+    --color-background: #fefefe;
+    --color-primary: hsl(31, 99%, 50%);
+    --color-accent: hsl(31, 99%, 60%);
+    --color-text: hsl(0, 0%, 17%);
+    --color-text-secondary: hsl(0, 0%, 53%);
+    --color-blue: hsl(218, 42%, 51%);
+    --font-primary: "Playfair Display", serif;
+    --font-secondary: "Poppins", sans-serif;
+    --font-body: "Roboto", sans-serif;
+}
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-body);
+    background-color: var(--color-background);
+    color: var(--color-text);
+}
+body::before,
+body::after {
+    content: "";
+    position: fixed;
+    background-color: var(--color-accent);
+    aspect-ratio: 1;
+    border-radius: 50%;
+    z-index: -1;
+    opacity: 0.1;
+}
+body::before {
+    right: 0;
+    top: 0;
+    width: 60vh;
+    transform: translate(5vw, -15vh);
+}
+body::after {
+    left: 0;
+    bottom: 0;
+    width: 60vh;
+    transform: translate(-5vw, 0);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--font-secondary);
+    margin: 0;
+}
+
+.wrapper {
+    max-width: 1200px;
+    margin-inline: auto;
+    padding-inline: 2rem;
+}
+.btn {
+    width: 100%;
+    text-align: center;
+    padding-inline: 1rem;
+    padding-block: 0.8rem;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1.5rem;
+}
+header > div {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+.logo {
+    font-size: 2rem;
+    font-weight: 600;
+}
+.logo a {
+    font-family: var(--font-primary);
+    color: var(--color-primary);
+    text-decoration: none;
+}
+nav a {
+    text-decoration: none;
+    color: var(--color-text);
+}
+nav a:hover,
+nav a.active {
+    color: var(--color-primary);
+}
+nav > ul {
+    display: flex;
+    list-style: none;
+}
+nav > ul li {
+    font-family: var(--font-secondary);
+    font-weight: 500;
+    padding-inline: 8px;
+    padding-block: 2px;
+    font-size: 12px;
+    border-inline: 2px solid #f2f2f29f;
+}
+nav > ul li:first-child {
+    border-left: none;
+}
+nav > ul li:last-child {
+    border-right: none;
+}
+.search-bar {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.search-bar > button {
+    border: 0;
+    padding-inline: 0;
+    background-color: transparent;
+    height: 100%;
+    & svg {
+        width: 24px;
+        height: 24px;
+        fill: var(--color-text-secondary);
+    }
+}
+.search-bar > button:hover svg {
+    fill: var(--color-primary);
+}
+.search-bar input {
+    min-width: 250px;
+    padding-block: 0.2rem;
+    padding-left: 1rem;
+    border: 2px solid #f2f2f29f;
+}
+.search-bar input:focus {
+    outline-color: var(--color-primary);
+}
+
+.pricing h1,
+.pricing h2 {
+    text-align: center;
+}
+
+.pricing h1 {
+    margin-top: 3em;
+    color: var(--color-primary);
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+}
+.pricing h2 {
+    font-weight: 600;
+    font-size: 2rem;
+}
+.pricing .cards {
+    margin: 2em;
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+}
+.pricing .card {
+    flex: 1;
+    background-color: var(--color-background);
+    border: 2px solid var(--color-text-secondary);
+    border-radius: 20px;
+    padding: 1.5rem;
+}
+.pricing .card:nth-child(2) {
+    border-color: var(--color-primary);
+}
+.pricing .card h3,
+.pricing .card span,
+.pricing .card .price {
+    font-family: var(--font-secondary);
+    text-align: center;
+}
+.pricing .card span,
+.pricing .card .price {
+    display: block;
+}
+.pricing .card h3 {
+    color: var(--color-primary);
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+.pricing .card .price {
+    margin-block: 1rem;
+    font-size: 2rem;
+}
+.pricing .card span {
+    color: var(--color-text-secondary);
+}
+.pricing .card ul {
+    margin-top: 36px;
+    margin-inline: auto;
+    max-width: fit-content;
+    list-style: none;
+    padding: 0;
+}
+.pricing .card ul li {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 16px;
+}
+.pricing .card ul li svg {
+    width: 24;
+    height: 24px;
+    fill: var(--color-blue);
+}
+.pricing .card ul li.disabled {
+    color: var(--color-text-secondary);
+}
+.pricing .card ul li.disabled svg {
+    opacity: 0;
+}
+.pricing .card a.btn {
+    display: block;
+    text-decoration: none;
+    color: var(--color-background);
+    font-size: 18px;
+    font-weight: 500;
+    border-radius: 20px;
+
+    background-image: linear-gradient(
+        to right,
+        hsl(0, 0%, 56%) 70%,
+        hsl(0, 0%, 70%)
+    );
+}
+.pricing .card:nth-child(2) a.btn {
+    background-image: linear-gradient(
+        to right,
+        var(--color-primary) 70%,
+        var(--color-accent)
+    );
+}
+.pricing .card a.btn:hover {
+    filter: brightness(1.1);
+    background: var(--color-primary);
+}
+
+@media screen and (width <= 783px) {
+    nav {
+        display: none;
+    }
+    .pricing .cards {
+        flex-direction: column;
+    }
+}
+@media screen and (width <= 480px) {
+    .search-bar input {
+        display: none;
+    }
+    body::before {
+        width: 40vh;
+    }
+    body::after {
+        transform: translate(-15vw, 10vh);
+    }
+}
