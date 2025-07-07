@@ -3,8 +3,91 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
         <title>Touro</title>
         <link rel="stylesheet" href="style.css" />
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/air-datepicker@3.6.0/air-datepicker.min.css"
+        />
+        <script type="module">
+            import AirDatepicker from "https://cdn.jsdelivr.net/npm/air-datepicker@3.6.0/+esm";
+            document.addEventListener("DOMContentLoaded", () => {
+                const dp = new AirDDateatepicker("#date", {
+                    minDate: new Date(),
+                    maxDate: new Date(),
+                    selectedDates: [new Date()],
+                    locale: {
+                        days: [
+                            "Sunday",
+                            "Monday",
+                            "Tuesday",
+                            "Wednesday",
+                            "Thursday",
+                            "Friday",
+                            "Saturday",
+                        ],
+                        daysShort: [
+                            "Sun",
+                            "Mon",
+                            "Tue",
+                            "Wed",
+                            "Thu",
+                            "Fri",
+                            "Sat",
+                        ],
+                        daysMin: ["Su", "Mo", "Tu", "We", "Th", "Fr", "Sa"],
+                        months: [
+                            "January",
+                            "February",
+                            "March",
+                            "April",
+                            "May",
+                            "June",
+                            "July",
+                            "August",
+                            "September",
+                            "October",
+                            "November",
+                            "December",
+                        ],
+                        monthsShort: [
+                            "Jan",
+                            "Feb",
+                            "Mar",
+                            "Apr",
+                            "May",
+                            "Jun",
+                            "Jul",
+                            "Aug",
+                            "Sep",
+                            "Oct",
+                            "Nov",
+                            "Dec",
+                        ],
+                        today: "Today",
+                        clear: "Clear",
+                        firstDay: 0,
+                    },
+                    dateFormat: "EEEE,d MMM",
+                    navTitles: {
+                        days(dp) {
+                            if (dp.selectedDates.length) {
+                                let date = dp.selectedDates[0];
+                                return `<small>
+                               You've chosen  ${dp.formatDate(
+                                   date,
+                                   "EEEE,d MMM"
+                               )}
+                            </small>`;
+                            }
+
+                            return "Choose date";
+                        },
+                    },
+                });
+            });
+        </script>
         <script type="module" src="svg-loader.js"></script>
     </head>
     <body>
@@ -17,17 +100,47 @@
                 <nav>
                     <ul>
                         <li class="nav-item active">
-                            <a href="#home">Home</a>
+                            <a href="#hero">Home</a>
                         </li>
                         <li class="nav-item">
                             <a href="#category">Category</a>
                         </li>
                         <li class="nav-item"><a href="#blog">Blog</a></li>
-                        <li class="nav-item"><a href="#about">About Us</a></li>
+                        <li class="nav-item">
+                            <a href="#about">About Us</a>
+                        </li>
                     </ul>
                 </nav>
                 <a href="#" class="btn">Login</a>
+
+                <div class="mobile">
+                    <nav>
+                        <ul>
+                            <li class="nav-item active">
+                                <a href="#hero">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#category">Category</a>
+                            </li>
+                            <li class="nav-item"><a href="#blog">Blog</a></li>
+                            <li class="nav-item">
+                                <a href="#about">About Us</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <a href="#" class="btn">Login</a>
+                </div>
             </header>
+            <main>
+                <section id="hero">
+                    <div class="hero__inner">
+                        <h2>
+                            Explore Beautiful&nbsp;<span>&#x2726;</span> World!
+                        </h2>
+                    </div>
+                </section>
+            </main>
+            <footer></footer>
         </div>
     </body>
 </html>
