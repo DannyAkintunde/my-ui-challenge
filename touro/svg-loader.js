@@ -1,7 +1,7 @@
 // simple utility script to load custom icons
 
 const iconClass = "icon";
-const iconRoot = new URL("touro/assets", window.origin);
+const iconRoot = new URL("assets", window.location.href);
 
 async function fetchIcon(iconName) {
     const result = await fetch(iconRoot.toString() + `/icons/${iconName}.svg`);

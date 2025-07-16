@@ -98,7 +98,7 @@ nav {
 }
 header .btn {
     font-size: 0.85rem;
-    padding: 0.4rem 2.5rem;
+    padding: 0.3rem 2.5rem;
     background-color: var(--color-primary);
     color: var(--text-tertiary);
     font-weight: 600;
