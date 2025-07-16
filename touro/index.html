@@ -3,8 +3,25 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
         <title>Touro</title>
+        <link
+            rel="apple-touch-icon"
+            sizes="180x180"
+            href="assets/apple-touch-icon.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="assets/favicon-32x32.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="assets/favicon-16x16.png"
+        />
+        <link rel="manifest" href="site.webmanifest" />
         <link rel="stylesheet" href="style.css" />
         <link
             rel="stylesheet"
@@ -12,11 +29,12 @@
         />
         <script type="module">
             import AirDatepicker from "https://cdn.jsdelivr.net/npm/air-datepicker@3.6.0/+esm";
+            const todaysDate = new Date();
             document.addEventListener("DOMContentLoaded", () => {
-                const dp = new AirDDateatepicker("#date", {
-                    minDate: new Date(),
-                    maxDate: new Date(),
-                    selectedDates: [new Date()],
+                const dp = new AirDatepicker("#date", {
+                    minDate: new Date(todaysDate.getFullYear(), 0),
+                    maxDate: new Date(todaysDate.getFullYear(), 11, 31),
+                    selectedDates: [todaysDate],
                     locale: {
                         days: [
                             "Sunday",
@@ -69,30 +87,29 @@
                         clear: "Clear",
                         firstDay: 0,
                     },
-                    dateFormat: "EEEE,d MMM",
+                    dateFormat: "E,d MMM",
                     navTitles: {
                         days(dp) {
                             if (dp.selectedDates.length) {
                                 let date = dp.selectedDates[0];
                                 return `<small>
-                               You've chosen  ${dp.formatDate(
-                                   date,
-                                   "EEEE,d MMM"
-                               )}
-                            </small>`;
+                                            ${dp.formatDate(date, "E,d MMM")}
+                                        </small>`;
                             }
 
                             return "Choose date";
                         },
                     },
+                    isMobile: window.matchMedia("(width <= 512px)").matches,
                 });
             });
         </script>
         <script type="module" src="svg-loader.js"></script>
+        <script defer src="script.js"></script>
     </head>
     <body>
-        <div class="wrapper">
-            <header>
+        <header>
+            <div class="wrapper">
                 <a class="logo">
                     <img src="assets/logo.png" alt="Touro logo" />
                     <h1>Touro</h1>
@@ -112,8 +129,10 @@
                     </ul>
                 </nav>
                 <a href="#" class="btn">Login</a>
-
-                <div class="mobile">
+                <button class="btn mobile" id="menu-toggle">
+                    <i class="icon" data-icon="menu"></i>
+                </button>
+                <div class="mobile mobile__nav-container">
                     <nav>
                         <ul>
                             <li class="nav-item active">
@@ -130,14 +149,57 @@
                     </nav>
                     <a href="#" class="btn">Login</a>
                 </div>
-            </header>
+            </div>
+        </header>
+        <div class="wrapper">
             <main>
                 <section id="hero">
                     <div class="hero__inner">
                         <h2>
-                            Explore Beautiful&nbsp;<span>&#x2726;</span> World!
+                            Explore Beautiful&nbsp;&nbsp;<span
+                                aria-hidden="true"
+                                >&#x2726;<img
+                                    class="airplane"
+                                    src="assets/airplane.png"
+                                />
+                            </span>
+                            World!
                         </h2>
+                        <form action="#" class="search-box">
+                            <div class="fields">
+                                <div class="field">
+                                    <label for="location">Located in</label>
+                                    <select name="location" id="location">
+                                        <option value="bangladesh">
+                                            Bangladesh
+                                        </option>
+                                    </select>
+                                </div>
+                                <div class="field">
+                                    <label for="date">Date</label>
+                                    <input
+                                        type="text"
+                                        name="date"
+                                        id="date"
+                                        readonly
+                                    />
+                                </div>
+                                <div class="field">
+                                    <label for="price">Price Range</label>
+                                    <select name="price" id="price">
+                                        <option value="1">$400-$700</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <button type="submit">Search</button>
+                        </form>
                     </div>
+                    <figure class="hero__image">
+                        <img
+                            src="assets/female-traveler.png"
+                            alt="female on luggage"
+                        />
+                    </figure>
                 </section>
             </main>
             <footer></footer>
