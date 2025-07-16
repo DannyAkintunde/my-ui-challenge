@@ -219,7 +219,7 @@ nav ul li a:hover {
 #hero .hero__image {
     position: relative;
     aspect-ratio: 1;
-    flex: 1 1 450px;
+    flex: 1 1;
     min-width: 400px;
 }
 #hero .hero__image::before {
@@ -287,6 +287,9 @@ nav ul li a:hover {
     #hero h2 span .airplane {
         bottom: -160px;
         left: 0;
+    }
+    #hero .hero__image {
+        min-width: 200px;
     }
 }
 @media screen and (width <= 562px) {
