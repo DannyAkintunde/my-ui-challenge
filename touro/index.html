@@ -132,7 +132,7 @@
                 <button class="btn mobile" id="menu-toggle">
                     <i class="icon" data-icon="menu"></i>
                 </button>
-                <div class="mobile mobile__nav-container">
+                <div class="mobile mobile__nav-container" aria-hidden="true">
                     <nav>
                         <ul>
                             <li class="nav-item active">
@@ -200,6 +200,409 @@
                             alt="female on luggage"
                         />
                     </figure>
+                </section>
+                <section id="popular">
+                    <h2>Popular Place</h2>
+                    <div class="tabber">
+                        <ul
+                            class="tabber__tabs"
+                            role="tablist"
+                            aria-label="categories"
+                        >
+                            <li
+                                class="tabber__tab nav-item active"
+                                role="tab"
+                                tabindex="0"
+                                data-index="0"
+                                aria-selected="true"
+                            >
+                                Beach
+                            </li>
+                            <li
+                                class="tabber__tab nav-item"
+                                role="tab"
+                                tabindex="0"
+                                data-index="1"
+                            >
+                                Mountain
+                            </li>
+                            <li
+                                class="tabber__tab nav-item"
+                                role="tab"
+                                tabindex="0"
+                                data-index="2"
+                            >
+                                Waterfall
+                            </li>
+                            <li
+                                class="tabber__tab nav-item"
+                                role="tab"
+                                tabindex="0"
+                                data-index="3"
+                            >
+                                Icebergs
+                            </li>
+                            <li><a href="#">View all</a></li>
+                        </ul>
+                        <div class="tabber__tabpanels">
+                            <div
+                                class="tabber__tabpanel active"
+                                role="tabpanel"
+                                data-index="0"
+                            >
+                                <div class="cards">
+                                    <div class="card">
+                                        <img
+                                            class="card__image"
+                                            src="assets/siasconsetbeach.jpg"
+                                            alt="Siasconset Beach"
+                                        />
+
+                                        <div class="card__description">
+                                            <div class="card__heading">
+                                                <h3>Siasconset Beach</h3>
+                                                <span class="card__rating">
+                                                    <i
+                                                        class="icon"
+                                                        data-icon="star-solid"
+                                                    ></i>
+                                                    4.9
+                                                </span>
+                                            </div>
+                                            <div class="card__location">
+                                                <i
+                                                    class="icon"
+                                                    data-icon="location"
+                                                ></i>
+                                                Island
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card">
+                                        <img
+                                            class="card__image"
+                                            src="assets/horseshoebay.webp"
+                                            alt="Horseshoe Bay"
+                                        />
+
+                                        <div class="card__description">
+                                            <div class="card__heading">
+                                                <h3>Horseshoe Bay</h3>
+                                                <span class="card__rating">
+                                                    <i
+                                                        class="icon"
+                                                        data-icon="star-solid"
+                                                    ></i>
+                                                    4.9
+                                                </span>
+                                            </div>
+                                            <div class="card__location">
+                                                <i
+                                                    class="icon"
+                                                    data-icon="location"
+                                                ></i>
+                                                Bermuda
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card">
+                                        <img
+                                            class="card__image"
+                                            src="assets/virgingorda.jpg"
+                                            alt="Virgin Gorda"
+                                        />
+
+                                        <div class="card__description">
+                                            <div class="card__heading">
+                                                <h3>Virgin Gorda</h3>
+                                                <span class="card__rating">
+                                                    <i
+                                                        class="icon"
+                                                        data-icon="star-solid"
+                                                    ></i>
+                                                    4.9
+                                                </span>
+                                            </div>
+                                            <div class="card__location">
+                                                <i
+                                                    class="icon"
+                                                    data-icon="location"
+                                                ></i>
+                                                Japan
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div
+                                class="tabber__tabpanel"
+                                role="tabpanel"
+                                data-index="1"
+                            >
+                                <div class="cards">
+                                    <div class="card">
+                                        <img
+                                            class="card__image"
+                                            src="assets/matterhorn.jpg"
+                                            alt="Matterhorn"
+                                        />
+
+                                        <div class="card__description">
+                                            <div class="card__heading">
+                                                <h3>Matterhorn</h3>
+                                                <span class="card__rating">
+                                                    <i
+                                                        class="icon"
+                                                        data-icon="star-solid"
+                                                    ></i>
+                                                    4.9
+                                                </span>
+                                            </div>
+                                            <div class="card__location">
+                                                <i
+                                                    class="icon"
+                                                    data-icon="location"
+                                                ></i>
+                                                Switzerland
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card">
+                                        <img
+                                            class="card__image"
+                                            src="assets/banffnationalpark.jpg"
+                                            alt="Banff National Park"
+                                        />
+
+                                        <div class="card__description">
+                                            <div class="card__heading">
+                                                <h3>Banff National Park</h3>
+                                                <span class="card__rating">
+                                                    <i
+                                                        class="icon"
+                                                        data-icon="star-solid"
+                                                    ></i>
+                                                    4.9
+                                                </span>
+                                            </div>
+                                            <div class="card__location">
+                                                <i
+                                                    class="icon"
+                                                    data-icon="location"
+                                                ></i>
+                                                Canada
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card">
+                                        <img
+                                            class="card__image"
+                                            src="assets/mountfuji.jpg"
+                                            alt="Mount Fuji"
+                                        />
+
+                                        <div class="card__description">
+                                            <div class="card__heading">
+                                                <h3>Mount Fuji</h3>
+                                                <span class="card__rating">
+                                                    <i
+                                                        class="icon"
+                                                        data-icon="star-solid"
+                                                    ></i>
+                                                    4.8
+                                                </span>
+                                            </div>
+                                            <div class="card__location">
+                                                <i
+                                                    class="icon"
+                                                    data-icon="location"
+                                                ></i>
+                                                Japan
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div
+                                class="tabber__tabpanel"
+                                role="tabpanel"
+                                data-index="2"
+                            >
+                                <div class="cards">
+                                    <div class="card">
+                                        <img
+                                            class="card__image"
+                                            src="assets/iguazufalls.jpg"
+                                            alt="Iguazu Falls"
+                                        />
+
+                                        <div class="card__description">
+                                            <div class="card__heading">
+                                                <h3>Iguazu Falls</h3>
+                                                <span class="card__rating">
+                                                    <i
+                                                        class="icon"
+                                                        data-icon="star-solid"
+                                                    ></i>
+                                                    4.9
+                                                </span>
+                                            </div>
+                                            <div class="card__location">
+                                                <i
+                                                    class="icon"
+                                                    data-icon="location"
+                                                ></i>
+                                                Argentina
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card">
+                                        <img
+                                            class="card__image"
+                                            src="assets/niagarafalls.jpg"
+                                            alt="Niagara Falls"
+                                        />
+
+                                        <div class="card__description">
+                                            <div class="card__heading">
+                                                <h3>Niagara Falls</h3>
+                                                <span class="card__rating">
+                                                    <i
+                                                        class="icon"
+                                                        data-icon="star-solid"
+                                                    ></i>
+                                                    4.8
+                                                </span>
+                                            </div>
+                                            <div class="card__location">
+                                                <i
+                                                    class="icon"
+                                                    data-icon="location"
+                                                ></i>
+                                                Canada
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card">
+                                        <img
+                                            class="card__image"
+                                            src="assets/victoriafalls.jpg"
+                                            alt="Victoria Falls"
+                                        />
+
+                                        <div class="card__description">
+                                            <div class="card__heading">
+                                                <h3>Victoria Falls</h3>
+                                                <span class="card__rating">
+                                                    <i
+                                                        class="icon"
+                                                        data-icon="star-solid"
+                                                    ></i>
+                                                    4.8
+                                                </span>
+                                            </div>
+                                            <div class="card__location">
+                                                <i
+                                                    class="icon"
+                                                    data-icon="location"
+                                                ></i>
+                                                Zambia
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div
+                                class="tabber__tabpanel"
+                                role="tabpanel"
+                                data-index="3"
+                            >
+                                <div class="cards">
+                                    <div class="card">
+                                        <img
+                                            class="card__image"
+                                            src="assets/siasconsetbeach.jpg"
+                                            alt="Jokulsarlon Glacier Lagoon"
+                                        />
+
+                                        <div class="card__description">
+                                            <div class="card__heading">
+                                                <h3>Jokulsarlon Glacier</h3>
+                                                <span class="card__rating">
+                                                    <i
+                                                        class="icon"
+                                                        data-icon="star-solid"
+                                                    ></i>
+                                                    4.9
+                                                </span>
+                                            </div>
+                                            <div class="card__location">
+                                                <i
+                                                    class="icon"
+                                                    data-icon="location"
+                                                ></i>
+                                                Iceland
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card">
+                                        <img
+                                            class="card__image"
+                                            src="assets/horseshoebay.webp"
+                                            alt="Antarctica Peninsula Cruise"
+                                        />
+
+                                        <div class="card__description">
+                                            <div class="card__heading">
+                                                <h3>Antarctica Peninsula</h3>
+                                                <span class="card__rating">
+                                                    <i
+                                                        class="icon"
+                                                        data-icon="star-solid"
+                                                    ></i>
+                                                    4.9
+                                                </span>
+                                            </div>
+                                            <div class="card__location">
+                                                <i
+                                                    class="icon"
+                                                    data-icon="location"
+                                                ></i>
+                                                Antarctica
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card">
+                                        <img
+                                            class="card__image"
+                                            src="assets/virgingorda.jpg"
+                                            alt="Ilulissat Icefjord"
+                                        />
+
+                                        <div class="card__description">
+                                            <div class="card__heading">
+                                                <h3>Ilulissat Icefjord</h3>
+                                                <span class="card__rating">
+                                                    <i
+                                                        class="icon"
+                                                        data-icon="star-solid"
+                                                    ></i>
+                                                    4.8
+                                                </span>
+                                            </div>
+                                            <div class="card__location">
+                                                <i
+                                                    class="icon"
+                                                    data-icon="location"
+                                                ></i>
+                                                Greenland
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </section>
             </main>
             <footer></footer>
