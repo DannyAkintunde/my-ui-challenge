@@ -18,11 +18,10 @@ document.addEventListener("click", (e) => {
     else if (navOpen && !mobileNav.contains(e.target)) openMenu(e, false);
 });
 
-const tabbers = document.querySelectorAll(".tabber");
+const tabLists = document.querySelectorAll(".tabber__tabs");
 
-tabbers.forEach((tabber) => {
-    const tabList = tabber.querySelector(".tabber__tabs");
-    const tabPanels = tabber.querySelector(".tabber__tabpanels");
+tabLists.forEach((tabList) => {
+    const tabPanels = document.getElementById(tabList.dataset.tabpannels);
     let activeTab = tabList.querySelector(".active");
 
     tabList.addEventListener("click", (e) => {

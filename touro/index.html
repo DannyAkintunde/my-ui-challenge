@@ -161,7 +161,6 @@
                                 >&#x2726;<img
                                     class="airplane"
                                     src="assets/airplane.png"
-                                    loading="lazy"
                                 />
                             </span>
                             World!
@@ -203,12 +202,13 @@
                     </figure>
                 </section>
                 <section id="popular">
-                    <h2>Popular Place</h2>
-                    <div class="tabber">
+                    <div class="header">
+                        <h2>Popular Place</h2>
                         <ul
                             class="tabber__tabs"
                             role="tablist"
                             aria-label="categories"
+                            data-tabpannels="popular-tabs"
                         >
                             <li
                                 class="tabber__tab nav-item active"
@@ -245,7 +245,10 @@
                             </li>
                             <li><a href="#">View all</a></li>
                         </ul>
-                        <div class="tabber__tabpanels">
+                    </div>
+
+                    <div class="tabber">
+                        <div class="tabber__tabpanels" id="popular-tabs">
                             <div
                                 class="tabber__tabpanel active"
                                 role="tabpanel"
@@ -522,13 +525,13 @@
                                     <div class="card">
                                         <img
                                             class="card__image"
-                                            src="assets/siasconsetbeach.jpg"
-                                            alt="Jokulsarlon Glacier Lagoon"
+                                            src="assets/jökulsárlónglacier.jpg"
+                                            alt="Jökulsárlón Glacier Lagoon"
                                         />
 
                                         <div class="card__description">
                                             <div class="card__heading">
-                                                <h3>Jokulsarlon Glacier</h3>
+                                                <h3>Jökulsárlón Glacier</h3>
                                                 <span class="card__rating">
                                                     <i
                                                         class="icon"
@@ -549,7 +552,7 @@
                                     <div class="card">
                                         <img
                                             class="card__image"
-                                            src="assets/horseshoebay.webp"
+                                            src="assets/antarcticapeninsula.png"
                                             alt="Antarctica Peninsula Cruise"
                                         />
 
@@ -576,7 +579,7 @@
                                     <div class="card">
                                         <img
                                             class="card__image"
-                                            src="assets/virgingorda.jpg"
+                                            src="assets/ilulissaticefjord.jpg"
                                             alt="Ilulissat Icefjord"
                                         />
 
@@ -688,12 +691,13 @@
                     </div>
                 </section>
                 <section id="locations">
-                    <h2>Explore Place</h2>
-                    <div class="tabber">
+                    <div class="header">
+                        <h2>Explore Place</h2>
                         <ul
                             class="tabber__tabs"
                             role="tablist"
                             aria-label="categories"
+                            data-tabpannels="locations-tab"
                         >
                             <li
                                 class="tabber__tab nav-item active"
@@ -730,7 +734,9 @@
                             </li>
                             <li><a href="#">View all</a></li>
                         </ul>
-                        <div class="tabber__tabpanels">
+                    </div>
+                    <div class="tabber">
+                        <div class="tabber__tabpanels" id="locations-tab">
                             <div
                                 class="tabber__tabpanel active"
                                 role="tabpanel"
@@ -1250,13 +1256,13 @@
                                     <div class="card">
                                         <img
                                             class="card__image"
-                                            src="assets/siasconsetbeach.jpg"
-                                            alt="Jokulsarlon Glacier Lagoon"
+                                            src="assets/jökulsárlónglacier.jpg"
+                                            alt="Jökulsárlón Glacier Lagoon"
                                         />
 
                                         <div class="card__description">
                                             <div class="card__heading">
-                                                <h3>Jokulsarlon Glacier</h3>
+                                                <h3>Jökulsárlón Glacier</h3>
                                                 <span class="card__rating">
                                                     <i
                                                         class="icon"
@@ -1277,7 +1283,7 @@
                                     <div class="card">
                                         <img
                                             class="card__image"
-                                            src="assets/horseshoebay.webp"
+                                            src="assets/antarcticapeninsula.png"
                                             alt="Antarctica Peninsula Cruise"
                                         />
 
@@ -1304,7 +1310,7 @@
                                     <div class="card">
                                         <img
                                             class="card__image"
-                                            src="assets/virgingorda.jpg"
+                                            src="assets/ilulissaticefjord.jpg"
                                             alt="Ilulissat Icefjord"
                                         />
 
@@ -1331,13 +1337,13 @@
                                     <div class="card">
                                         <img
                                             class="card__image"
-                                            src="assets/siasconsetbeach.jpg"
-                                            alt="Jokulsarlon Glacier Lagoon"
+                                            src="assets/jökulsárlónglacier.jpg"
+                                            alt="Jökulsárlón Glacier Lagoon"
                                         />
 
                                         <div class="card__description">
                                             <div class="card__heading">
-                                                <h3>Jokulsarlon Glacier</h3>
+                                                <h3>Jökulsárlón Glacier</h3>
                                                 <span class="card__rating">
                                                     <i
                                                         class="icon"
@@ -1358,7 +1364,7 @@
                                     <div class="card">
                                         <img
                                             class="card__image"
-                                            src="assets/horseshoebay.webp"
+                                            src="assets/antarcticapeninsula.png"
                                             alt="Antarctica Peninsula Cruise"
                                         />
 
@@ -1385,7 +1391,7 @@
                                     <div class="card">
                                         <img
                                             class="card__image"
-                                            src="assets/virgingorda.jpg"
+                                            src="assets/ilulissaticefjord.jpg"
                                             alt="Ilulissat Icefjord"
                                         />
 
@@ -1430,6 +1436,56 @@
                     <div class="stat">
                         <strong class="stat__value">2k+</strong>
                         <span class="stat__title">Reviews</span>
+                    </div>
+                </section>
+                <section id="gallery">
+                    <div class="header">
+                        <h2>
+                            Our Gallery <small>-Share Your Happy Momment</small>
+                        </h2>
+                        <a href="#">View all</a>
+                    </div>
+                    <div class="gallery__grid">
+                        <img
+                            src="assets/chillinginbeach.jpg"
+                            alt="chilling in beach"
+                            loading="lazy"
+                            class="gallery__griditem gallery__griditem--long"
+                        />
+                        <img
+                            src="assets/articview.jpg"
+                            alt="a view of the artic"
+                            loading="lazy"
+                            class="gallery__griditem"
+                        />
+
+                        <img
+                            src="assets/beachdroneshot.jpg"
+                            alt="beach drone shot"
+                            loading="lazy"
+                            class="gallery__griditem gallery__griditem--long"
+                        />
+
+                        <img
+                            src="assets/hike.jpg"
+                            alt="people hicking"
+                            loading="lazy"
+                            class="gallery__griditem gallery__griditem--long"
+                        />
+
+                        <img
+                            src="assets/baskinginsun.jpg"
+                            alt="basking in sun"
+                            loading="lazy"
+                            class="gallery__griditem"
+                        />
+
+                        <img
+                            src="assets/picmik.jpg"
+                            alt="piknik shot"
+                            loading="lazy"
+                            class="gallery__griditem"
+                        />
                     </div>
                 </section>
             </main>
