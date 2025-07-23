@@ -32,7 +32,8 @@ section .header {
     flex-wrap: wrap;
     gap: 1em;
 }
-section .header a {
+section .header a,
+.footer__lower a {
     color: var(--color-primary);
 }
 .header a:hover {
@@ -450,10 +451,9 @@ nav ul li a:hover {
 .card .card__location .icon {
     width: 1rem;
     height: 1rem;
+    color: var(--color-secondary);
 }
-.card .card__location svg * {
-    fill: var(--color-secondary);
-}
+
 #features {
     display: flex;
     justify-content: space-between;
@@ -661,4 +661,72 @@ nav ul li a:hover {
     outline: transparent;
     border: 0;
     padding: 1.2rem;
+}
+footer .icon {
+    width: 1.2rem;
+    height: 1.2rem;
+}
+.footer__upper {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 2em;
+    margin-bottom: 3em;
+}
+.footer__col {
+    flex: 1;
+}
+.footer__col h3,
+.footer__col .logo {
+    margin-bottom: 2em;
+}
+.footer__col h3 {
+    margin-top: 0.875rem;
+}
+.social-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5em;
+    margin-top: 0.5em;
+}
+.social-links__item a svg {
+    fill: var(--text-secondary);
+}
+.social-links__item a:hover svg {
+    fill: var(--color-primary);
+    color: var(--color-primary);
+}
+.social-links__item [data-icon="linkedin"] {
+    scale: 1.2;
+}
+.footer__lower {
+    text-align: center;
+    color: var(--text-secondary);
+    padding: 2em;
+    border-top: 1px solid var(--text-secondary);
+}
+.footer__col .quicklinks {
+    list-style: none;
+}
+.footer__col .quicklinks li {
+    margin-bottom: 0.5em;
+}
+.footer__col a {
+    color: var(--text-secondary);
+}
+.footer__col a:hover {
+    color: var(--text-primary);
+}
+.contact {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+}
+.contact__item {
+    display: flex;
+    gap: 8px;
+}
+.contact__item .icon {
+    min-width: 1.2rem;
+    color: var(--color-primary);
 }
